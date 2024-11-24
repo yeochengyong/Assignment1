@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Camera Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=GFS+Didot&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="promo-banner">
+        Use code NOV2024 for 10% off your first purchase!
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><h1>The<br>Camera<br>Club</h1></a>
+        </div>
+        <nav>
+            <a href="cameras.html">Cameras</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="services.html">Services</a>
+            <a href="#footer">Contact</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search for a product..." />
+            <div id="searchResults"></div>
+            <button id="searchButton">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </header>
+    <script src="script.js"></script>
+
+    <section class="hero">
+        <h2>FUJIFILM X100<span style="color: rgb(213, 7, 7);">VI</span></h2>
+        <p>The One and Only</p>
+        <button class="shop-button"><a href="product.html">Shop Now</a></button>
+    </section>
+
+    <section class="featured-products">
+        <h3>Featured Products</h3>
+        <div class="products">
+            <div class="product">
+                <span class="tag best-seller">BEST SELLER</span>
+                <img src="img/featured-product-1.png" alt="product image">
+                <h4>Sony A7IV</h4>
+                <p>$2499.00</p>
+            </div>
+            <div class="product">
+                <span class="tag new">NEW</span>
+                <img src="img/featured-product-2.png" alt="product image">
+                <h4>Nikon Z6iii</h4>
+                <p>$2939.00</p>
+            </div>
+            <div class="product">
+                <span class="tag new">NEW</span>
+                <img src="img/featured-product-3.png" alt="product image">
+                <h4>Leica Q3</h4>
+                <p>$9600.00</p>
+            </div>
+        </div>
+        <button class="browse-button"><a href="cameras.html">Browse All</a></button>
+    </section>
+
+    <section class="holiday-sale">
+        <h3>⭐ 12.12 CHRISTMAS SALE ⭐</h3>
+        <p>Up to 50% off selected items!</p>
+        <img src="img/christmas-tree.png" alt="christmas-tree" id="left-tree">
+        <img src="img/christmas-tree.png" alt="christmas-tree" id="right-tree">
+    </section>
+
+    <section class="testimonials">
+        <h3>Testimonials from Customers</h3>
+        <div class="testimonial-list">
+            <div class="testimonial active">
+                <p class="quote">"Pleasant and smooth experience!
+                    John was quick to help me decide <br>which camera was best suited for my needs. 
+                    The Camera Club customer service <br> is one of the best."</p>
+                <img src="img/client-photo-1.jpg" alt="client's photo" class="client-photo" />
+                <div class="client-info">
+                    <h5>Joseph L.</h5>
+                    <p class="stars">★★★★★</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p class="quote">"Great service! I was nervous initially about investing in a good camera. <br>
+                    However, the staff were super patient and explained everything clearly."</p>
+                <img src="img/client-photo-2.jpg" alt="client's photo" class="client-photo" />
+                <div class="client-info">
+                    <h5>Sophia M.</h5>
+                    <p class="stars">★★★★☆</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p class="quote">"Fast, simple and professional. Camera had issues with the sensor 
+                    and screen <br> but repair only took a week to finish. Highly reccomended for people who seek <br> to
+                    repair and clean their camera gear for a fast and reasonable price.</p>
+                <img src="img/client-photo-3.jpg" alt="client's photo" class="client-photo" />
+                <div class="client-info">
+                    <h5>Alex T.</h5>
+                    <p class="stars">★★★★★</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <section class="company-history">
+        <h3>Our History</h3>
+        <div class="history-content">
+            <p>
+                Founded in 2015, The Camera Club was started by a group of photographers with the common interest of setting up a camera store. 
+                Over the years, we've grown into a large community, now offering a curated selection of high-quality cameras, lenses, and accessories. 
+            </p>
+            <p>
+                As photographers, we understand the frustration that can come from bad workmanship, long lead times and poor communication.
+                That's why we've expanded our services to include camera repairs, trade-ins, and expert consultations. 
+                Our commitment to providing exceptional service and guidance will not change.
+            </p>
+            <p>
+                Today, we remain dedicated to helping photographers — both beginners and 
+                professionals — capture moments with the finest gear and support.
+            </p>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
+                <p>Email: contact@thecameraclub.com</p>
+                <p>Phone: +65 8765 4321</p>
+            </div>
+            <div class="footer-links">
+                <p><a href="#about">About Us</a></p>
+                <p><a href="#terms">Terms of Service</a></p>
+                <p><a href="#privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

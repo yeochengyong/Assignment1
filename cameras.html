@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameras - The Camera Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=GFS+Didot&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><h1>The<br>Camera<br>Club</h1></a>
+        </div>
+        <nav>
+            <a href="cameras.html">Cameras</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="services.html">Services</a>
+            <a href="#footer">Contact</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search for a product..." />
+            <div id="searchResults"></div>
+            <button id="searchButton">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </header>
+    <script src="script.js"></script>
+
+    <section class="cam-access-heading">
+        <h2>Cameras</h2>
+        <p>Discover our wide selection of different DSLR and<br>
+        Mirrorless cameras for both beginners and enthusiasts.</p>
+    </section>
+    <section class="cam-access-gallery">
+        <div class="cam-access-item" data-name="Canon R6 Mark II">
+            <img src="img/camera-3.png" alt="Camera 3">
+            <div class="product-info">
+                <h3>Canon EOS R6 Mark II</h3>
+                <p class="price">$2799.00</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+        <div class="cam-access-item" data-name="Fujifilm X100VI">
+            <div class="badge new">New</div>
+            <img src="img/camera-2.jpg" alt="Camera 2">
+            <div class="product-info">
+                <h3>Fujifilm X100VI</h3>
+                <p class="price">$2499.00</p>
+                <button class="buy-now"><a href="product.html">Buy Now</a></button>
+            </div>
+        </div>
+        <div class="cam-access-item" data-name="Nikon Z8">
+            <div class="badge sale">20% Off</div>
+            <img src="img/camera-1.png" alt="Camera 1">
+            <div class="product-info">
+                <h3>Nikon Z8</h3>
+                <p class="price"><span class="old-price">$5999.00</span> $4799.20</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+        <div class="cam-access-item" data-name="Sony A1">
+            <div class="badge sale">15% Off</div>
+            <img src="img/camera-4.png" alt="Camera 4">
+            <div class="product-info">
+                <h3>Sony A1</h3>
+                <p class="price"><span class="old-price">$9169.00</span> $7783.65</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+        <div class="cam-access-item" data-name="Leica M11-P">
+            <img src="img/camera-6.png" alt="Camera 6">
+            <div class="product-info">
+                <h3>Leica M11-P</h3>
+                <p class="price">$13,750.00</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+        <div class="cam-access-item" data-name="Ricoh GR IIIx">
+            <div class="badge bestseller">Best Seller</div>
+            <img src="img/camera-5.png" alt="Camera 5">
+            <div class="product-info">
+                <h3>Ricoh GR IIIX</h3>
+                <p class="price">$1849.00</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
+                <p>Email: contact@thecameraclub.com</p>
+                <p>Phone: +65 8765 4321</p>
+            </div>
+            <div class="footer-links">
+                <p><a href="#about">About Us</a></p>
+                <p><a href="#terms">Terms of Service</a></p>
+                <p><a href="#privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
