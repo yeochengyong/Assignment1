@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - The Camera Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=GFS+Didot&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,25 +19,70 @@
             <a href="services.html">Services</a>
             <a href="#footer">Contact</a>
         </nav>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search for a product..." />
+            <div id="searchResults"></div>
+            <button id="searchButton">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
     </header>
+    <script src="script.js"></script>
 
-    <section class="banner">
-        <h2>The Camera Club Services</h2>
+    <section class="service-main">
+        <h1>The Camera Club<br>Services</h1>
     </section>
-    <section class="camera-repair">
-        <h3>Camera & Lens Repair</h3>
-        <img src="" alt="display img">
+    <section class="service-highlight">
+        <h2>Camera & Lens Repair</h2>
+        <div class="service-content">
+            <div class="service-image">
+                <img src="img/camera-repair.jpg" alt="Camera Lens Repair">
+            </div>
+            <p>
+                Is your camera acting up, or does your lens seem to have dust and mold in them?
+                Fret not, our experienced technicians are here to help. We offer reliable,
+                high-quality repair services for a variety of camera brands and lens types,
+                ensuring you get back to capturing memories without interruption.
+            </p>
+        </div>
     </section>
-    <section class="services-offer">
-        <h4>Camera Body Repair</h4>
-        <p>Whether it's a shutter malfunction or a sensor that needs a deep clean, our skilled technicians<br>
-            are equipped to carefully handle the intricate components that power your camera, restoring it to peak condition.</p>
-        <img src="" alt="display img">
+    <section class="services-list">
+        <h2>Services we offer</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Camera Body Repair</h3>
+                <p>
+                    Whether it's a shutter malfunction or a sensor that needs a deep clean,
+                    our skilled technicians are equipped to carefully handle the intricate
+                    components that power your camera, restoring it to peak condition.
+                </p>
+                <button>Make Appointment</button>
+            </div>
+            <div class="service-item">
+                <h3>Lens Repair and Calibration</h3>
+                <p>
+                    Over time, lenses can incur damages to their internals, build up dust and fungus,
+                    or start to see alignment issues. The Camera Club fixes lenses of all types,
+                    ensuring each repair is performed with precision and care for sharp, clear images.
+                </p>
+                <button>Make Appointment</button>
+            </div>
+        </div>
+    </section>
 
-        <h4>Lens Repair and Calibration</h4>
-        <p>Over time, lenses can incur damages to their internals, build up dust and fungus, or start to see alignment issues. <br>
-            The Camera Club fixes lenses of all types, ensuring each repair is performed with precision and care for sharp, clear images.</p>
-        <img src="" alt="display img">
-    </section>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
+                <p>Email: contact@thecameraclub.com</p>
+                <p>Phone: +65 8765 4321</p>
+            </div>
+            <div class="footer-links">
+                <p><a href="#about">About Us</a></p>
+                <p><a href="#terms">Terms of Service</a></p>
+                <p><a href="#privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

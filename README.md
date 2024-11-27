@@ -64,6 +64,8 @@ The photos used in this site were obtained from:
 - Accessories 4 - https://m.media-amazon.com/images/I/81rtQikG4qL._AC_SX679_.jpg
 - Accessories 5 - https://assets.cathayphoto.com.sg/product/FU-ZD-NP-W126S-1.jpg
 - Accessories 6 - https://www.mscolor.com.sg/wp-content/uploads/2022/05/1625827855_1642347.jpg
+- Camera Service Main - https://images.unsplash.com/photo-1592296240415-b3400ad7adac?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+- Camera Repair - 
 
 ### Acknowledgements
 
