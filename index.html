@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="promo-banner">
-        Use code NOV2024 for 10% off your first purchase!
+        Use code WELCOME10 for 10% off your first purchase!
     </div>
 
     <header>
@@ -31,7 +31,14 @@
             </button>
         </div>
     </header>
-    <script src="script.js"></script>
+
+    <div id="promo-popup" class="promo-popup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2>Special Promotion!</h2>
+          <p>Get 10% off your first purchase! <br>Use code <strong style="color: #f6bc46;">WELCOME10</strong> at checkout.</p>
+        </div>
+    </div>
 
     <section class="hero">
         <h2>FUJIFILM X100<span style="color: rgb(213, 7, 7);">VI</span></h2>
@@ -131,19 +138,26 @@
     </section>
 
     <footer id="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <p>47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
-                <p>Email: contact@thecameraclub.com</p>
-                <p>Phone: +65 8765 4321</p>
-            </div>
-            <div class="footer-links">
-                <p><a href="#about">About Us</a></p>
-                <p><a href="#terms">Terms of Service</a></p>
-                <p><a href="#privacy">Privacy Policy</a></p>
-            </div>
+        <div class="footer-container">
+          <div class="left-section">
+            <h4>10% OFF WHEN YOU SIGN UP</h4>
+            <p>
+              Get the latest updates on anything cameras along with an exclusive 10% off <br>when you subscribe to our monthly newsletters.
+            </p>
+            <form>
+              <input type="email" placeholder="your@address.com" aria-label="Email Address">
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="right-section">
+            <p>Address: 47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
+            <p>Email: <a href="mailto:contact@thecameraclub.com">contact@thecameraclub.com</a></p>
+            <p>Phone: <a href="tel:+6587654321">+65 8765 4321</a></p>
+          </div>
         </div>
-    </footer>
+      </footer>
+
+      <script src="script.js"></script>
 </body>
 </html>
 

@@ -26,8 +26,35 @@
                 <i class="fas fa-search"></i>
             </button>
         </div>
+
+        <!-- Cart Icon -->
+        <div id="cart-icon" onclick="toggleCart()">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count" style="display: none;">0</span>
+        </div>
+        
+        <!-- Shopping Cart Overlay -->
+        <div id="cart-overlay" onclick="closeCart(event)"></div>
+        
+        <!-- Shopping Cart Sidebar -->
+        <div id="cart-sidebar" class="cart">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <p id="cart-total" class="cart-total">Total: $0.00</p>
+                <button onclick="goToCheckout()" class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+
+        <!-- Modal alert IF CART EMPTY -->
+        <div id="empty-cart-modal" class="modal">
+            <div class="modal-content">
+                <p>Your cart is empty!</p>
+            </div>
+        </div>
     </header>
-    <script src="script.js"></script>
 
     <section class="cam-access-heading">
         <h2>Accessories</h2>
@@ -35,73 +62,80 @@
         from tripods and filters to memory cards and protective cases.</p>
     </section>
     <section class="cam-access-gallery">
-        <div class="cam-access-item" data-name="K&F Concept NANO-X MRC UV Series Protection Filter">
+        <div class="cam-access-item" data-name="K&F Concept NANO-X Filter" data-price="16.00">
             <img src="img/accessories-1.jpg" alt="Accessories 1">
             <div class="product-info">
                 <div class="badge bestseller">Best Seller</div>
                 <h3>K&F NANO-X MRC UV Series<br>Protection Filter</h3>
                 <p class="price">$16.00-$44.90</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <div class="cam-access-item" data-name="Manfrotto Befree GT PRO 3-Way Aluminum Tripod">
+        <div class="cam-access-item" data-name="Manfrotto Befree GT PRO Tripod" data-price="263.96">
             <img src="img/accessories-2.jpg" alt="Accessories 2">
             <div class="product-info">
                 <div class="badge sale">20% Off</div>
                 <h3>Manfrotto Befree GT PRO 3-Way<br>Aluminum Tripod</h3>
                 <p class="price"><span class="old-price">$329.95</span> $263.96</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <div class="cam-access-item" data-name="Peak Design Everyday Sling 3L v2">
+        <div class="cam-access-item" data-name="Peak Design Everyday Sling 3L v2" data-price="134.10">
             <div class="badge sale">10% Off</div>
             <img src="img/accessories-3.jpg" alt="Accessories 3">
             <div class="product-info">
                 <h3>Peak Design Everyday Sling 3L v2</h3>
                 <p class="price"><span class="old-price">$149.00</span> $134.10</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <div class="cam-access-item" data-name="SanDisk 1TB Extreme PRO SDXC UHS-I Memory Card">
+        <div class="cam-access-item" data-name="SanDisk 1TB Extreme PRO SDXC UHS-I Memory Card" data-price="168.70">
             <img src="img/accessories-4.jpg" alt="Accessories 4">
             <div class="product-info">
                 <h3>SanDisk 1TB Extreme PRO<br>SDXC UHS-I Memory Card</h3>
                 <p class="price">$168.70</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <div class="cam-access-item" data-name="Fujifilm NP-W126s Li-Ion Battery">
+        <div class="cam-access-item" data-name="Fujifilm NP-W126s Li-Ion Battery" data-price="104.00">
             <div class="badge new ">New</div>
             <img src="img/accessories-5.jpg" alt="Accessories 5">
             <div class="product-info">
                 <h3>Fujifilm NP-W126s Li-Ion Battery</h3>
                 <p class="price">$104.00</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <div class="cam-access-item" data-name="Peak Design Slide">
+        <div class="cam-access-item" data-name="Peak Design Slide" data-price="55.96">
             <img src="img/accessories-6.jpg" alt="Accessories 6">
             <div class="product-info">
                 <h3>Peak Design Slide</h3>
                 <p class="price">$55.96</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
     </section>
 
     <footer id="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <p>47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
-                <p>Email: contact@thecameraclub.com</p>
-                <p>Phone: +65 8765 4321</p>
-            </div>
-            <div class="footer-links">
-                <p><a href="#about">About Us</a></p>
-                <p><a href="#terms">Terms of Service</a></p>
-                <p><a href="#privacy">Privacy Policy</a></p>
-            </div>
+        <div class="footer-container">
+          <div class="left-section">
+            <h4>10% OFF WHEN YOU SIGN UP</h4>
+            <p>
+              Get the latest updates on anything cameras along with an exclusive 10% off <br>when you subscribe to our monthly newsletters.
+            </p>
+            <form>
+              <input type="email" placeholder="your@address.com" aria-label="Email Address">
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="right-section">
+            <p>Address: 47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
+            <p>Email: <a href="mailto:contact@thecameraclub.com">contact@thecameraclub.com</a></p>
+            <p>Phone: <a href="tel:+6587654321">+65 8765 4321</a></p>
+          </div>
         </div>
-    </footer>
+      </footer>
+
+      <script src="script.js"></script>
 </body>
 </html>

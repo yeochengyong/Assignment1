@@ -26,8 +26,37 @@
                 <i class="fas fa-search"></i>
             </button>
         </div>
+
+
+        <!-- Cart Icon -->
+        <div id="cart-icon" onclick="toggleCart()">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count" style="display: none;">0</span>
+        </div>
+        
+        <!-- Shopping Cart Overlay -->
+        <div id="cart-overlay" onclick="closeCart(event)"></div>
+        
+        <!-- Shopping Cart Sidebar -->
+        <div id="cart-sidebar" class="cart">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <p id="cart-total" class="cart-total">Total: $0.00</p>
+                <button onclick="goToCheckout()" class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+
+        <!-- Modal alert IF CART EMPTY -->
+        <div id="empty-cart-modal" class="modal">
+            <div class="modal-content">
+                <p>Your cart is empty!</p>
+            </div>
+        </div>
     </header>
-    <script src="script.js"></script>
+    
 
     <section class="cam-access-heading">
         <h2>Cameras</h2>
@@ -35,72 +64,80 @@
         Mirrorless cameras for both beginners and enthusiasts.</p>
     </section>
     <section class="cam-access-gallery">
-        <div class="cam-access-item" data-name="Canon R6 Mark II">
+        <div class="cam-access-item" data-name="Canon R6 Mark II" data-price="2799.00">
             <img src="img/camera-3.png" alt="Camera 3">
             <div class="product-info">
                 <h3>Canon EOS R6 Mark II</h3>
                 <p class="price">$2799.00</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <div class="cam-access-item" data-name="Fujifilm X100VI">
+        <a style="text-decoration: none;" href="product.html" class="cam-access-item" data-name="Fujifilm X100VI" data-price="2499.00">
             <div class="badge new">New</div>
             <img src="img/camera-2.jpg" alt="Camera 2">
             <div class="product-info">
                 <h3>Fujifilm X100VI</h3>
                 <p class="price">$2499.00</p>
-                <button class="buy-now"><a href="product.html">Buy Now</a></button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
-        </div>
-        <div class="cam-access-item" data-name="Nikon Z8">
+        </a>
+        <div class="cam-access-item" data-name="Nikon Z8" data-price="4799.20">
             <div class="badge sale">20% Off</div>
             <img src="img/camera-1.png" alt="Camera 1">
             <div class="product-info">
                 <h3>Nikon Z8</h3>
                 <p class="price"><span class="old-price">$5999.00</span> $4799.20</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <div class="cam-access-item" data-name="Sony A1">
+        <div class="cam-access-item" data-name="Sony A1" data-price="7783.65">
             <div class="badge sale">15% Off</div>
             <img src="img/camera-4.png" alt="Camera 4">
             <div class="product-info">
                 <h3>Sony A1</h3>
                 <p class="price"><span class="old-price">$9169.00</span> $7783.65</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <div class="cam-access-item" data-name="Leica M11-P">
+        <div class="cam-access-item" data-name="Leica M11-P" data-price="13750.00">
             <img src="img/camera-6.png" alt="Camera 6">
             <div class="product-info">
                 <h3>Leica M11-P</h3>
                 <p class="price">$13,750.00</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <div class="cam-access-item" data-name="Ricoh GR IIIx">
+        <div class="cam-access-item" data-name="Ricoh GR IIIx" data-price="1849.00">
             <div class="badge bestseller">Best Seller</div>
             <img src="img/camera-5.png" alt="Camera 5">
             <div class="product-info">
                 <h3>Ricoh GR IIIX</h3>
                 <p class="price">$1849.00</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
     </section>
+
     <footer id="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <p>47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
-                <p>Email: contact@thecameraclub.com</p>
-                <p>Phone: +65 8765 4321</p>
-            </div>
-            <div class="footer-links">
-                <p><a href="#about">About Us</a></p>
-                <p><a href="#terms">Terms of Service</a></p>
-                <p><a href="#privacy">Privacy Policy</a></p>
-            </div>
+        <div class="footer-container">
+          <div class="left-section">
+            <h4>10% OFF WHEN YOU SIGN UP</h4>
+            <p>
+              Get the latest updates on anything cameras along with an exclusive 10% off <br>when you subscribe to our monthly newsletters.
+            </p>
+            <form>
+              <input type="email" placeholder="your@address.com" aria-label="Email Address">
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="right-section">
+            <p>Address: 47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
+            <p>Email: <a href="mailto:contact@thecameraclub.com">contact@thecameraclub.com</a></p>
+            <p>Phone: <a href="tel:+6587654321">+65 8765 4321</a></p>
+          </div>
         </div>
-    </footer>
+      </footer>
+
+      <script src="script.js"></script>
 </body>
 </html>
