@@ -26,6 +26,34 @@
                 <i class="fas fa-search"></i>
             </button>
         </div>
+
+        <!-- Cart Icon -->
+        <div id="cart-icon" onclick="toggleCart()">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count" style="display: none;">0</span>
+        </div>
+        
+        <!-- Shopping Cart Overlay -->
+        <div id="cart-overlay" onclick="closeCart(event)"></div>
+        
+        <!-- Shopping Cart Sidebar -->
+        <div id="cart-sidebar" class="cart">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <p id="cart-total" class="cart-total">Total: $0.00</p>
+                <button onclick="goToCheckout()" class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+
+        <!-- Modal alert IF CART EMPTY -->
+        <div id="empty-cart-modal" class="modal">
+            <div class="modal-content">
+                <p>Your cart is empty!</p>
+            </div>
+        </div>
     </header>
 
     <section class="service-main">

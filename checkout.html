@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="heading-title">
+        <a href="index.html">The Camera Club</a>
+    </div>
+    </div>
+    <div class="checkout-wrapper">
+        <!-- Order Summary -->
+        <div class="checkout-left">
+            <h2 id="h2-order">Order Summary</h2>
+            <div id="order-summary">
+                <!-- Items will be injected dynamically here -->
+            </div>
+            <div class="summary-details">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="order-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="order-shipping">$10.00</span>
+                </div>
+                <div class="summary-row" id="discount-row" style="display: none;">
+                    <span>Discount:</span>
+                    <span id="discount-amount">-$0.00</span>
+                </div>
+                <div class="discount-section">
+                    <input type="text" id="discount-code" placeholder="Enter Discount Code">
+                    <button id="apply-discount">Apply</button>
+                    <p id="discount-message"></p>
+                </div>
+                <div class="summary-total">
+                    <span>Total:</span>
+                    <span id="order-total">$0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shipping & Payment Details -->
+        <div class="checkout-right">
+            <h2 id="h2-order">Shipping Details</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <input type="text" id="full-name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="address" placeholder="Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="city" placeholder="City" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="zip-code" placeholder="ZIP Code" required>
+                </div>
+                <h2 id="h2-order">Payment Details</h2>
+                <div class="form-group">
+                    <input type="text" id="card-number" placeholder="Card Number" maxlength="16" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+                </div>
+                <button type="submit" id="pay-button">Pay</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hidden Thank You Screen -->
+    <div class="thank-you-screen" id="thank-you-screen" style="display: none;">
+        <h2>Thank You for your purchase!</h2>
+        <div class="order-summary">
+            <p><strong>Order Code:</strong> <span id="order-code">#91792</span></p>
+            <p>We've received your order and will ship it within 3-5 Business Days.</p>
+
+            <h3>Order Details</h3>
+            <div id="thank-you-summary">
+                <!-- Cart Items and Total -->
+            </div>
+        </div>
+
+        <button id="back-to-home" class="back-button">Back to Home</button>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-container">
+          <div class="left-section">
+            <h4>10% OFF WHEN YOU SIGN UP</h4>
+            <p>
+                Get the latest updates on anything cameras along with an exclusive 10% off <br>when you subscribe to our monthly newsletters.
+            </p>
+            <form>
+                <input type="email" placeholder="your@address.com" aria-label="Email Address">
+                <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="right-section">
+                <p>Address: 47 North Bridge Road, Peninsula Plaza, Singapore 609199</p>
+                <p>Email: <a href="mailto:contact@thecameraclub.com">contact@thecameraclub.com</a></p>
+                <p>Phone: <a href="tel:+6587654321">+65 8765 4321</a></p>
+          </div>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

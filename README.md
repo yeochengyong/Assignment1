@@ -10,19 +10,8 @@ Link to my figma wireframe - https://www.figma.com/design/Jvz0DN65N9FJdX08laDWOV
 
 ## Features
 
---- IN PROGRESS ** TEMPLATE USED FOR NOW ---
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+For my index.html page, 
  
-### Existing Features
-
---- IN PROGRESS ** TEMPLATE USED FOR NOW ---
-
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
 
 ## Testing
 
