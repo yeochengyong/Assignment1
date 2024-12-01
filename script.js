@@ -10,7 +10,13 @@ document.getElementById("searchButton").addEventListener("click", function () {
     }
 });
 
+// HAMBURGER MENU (FOR MOBILE SCREENS)
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navBar = document.querySelector('.nav-bar');
 
+hamburgerMenu.addEventListener('click', () => {
+    navBar.classList.toggle('active');
+});
 
 // POP UP (index.html)
 function showPopup() {
@@ -96,9 +102,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // SEARCH FUNCTION
+document.addEventListener("DOMContentLoaded", () => {
+    const searchBar = document.getElementById("searchBar");
+    const searchButton = document.getElementById("searchButton");
+    const searchResults = document.getElementById("searchResults");
 
+    const products = [
+        { name: "Canon R6 Mark II", category: "camera" },
+        { name: "Fujifilm X100VI", category: "camera" },
+        { name: "Nikon Z8", category: "camera" },
+        { name: "Sony A1", category: "camera" },
+        { name: "Leica M11-P", category: "camera" },
+        { name: "Ricoh GR IIIX", category: "camera" },
+        { name: "K&F Concept NANO-X Filter", category: "accessory" },
+        { name: "Manfrotto Befree GT PRO Tripod", category: "accessory" },
+        { name: "Peak Design Everyday Sling 3L v2", category: "accessory" },
+        { name: "SanDisk 1TB Extreme PRO UHS-I Memory Card", category: "accessory" },
+        { name: "Fujifilm NP-W126s Li-Ion Battery", category: "accessory" },
+        { name: "Peak Design Slide", category: "accessory" },
+    ];
 
+    // Function to show search results
+    function showResults(query) {
+        const filteredProducts = products.filter(product =>
+            product.name.toLowerCase().includes(query.toLowerCase())
+        );
 
+        searchResults.innerHTML = ""; // Clear previous results
+        if (filteredProducts.length > 0) {
+            filteredProducts.forEach(product => {
+                const resultItem = document.createElement("p");
+                resultItem.textContent = product.name;
+                resultItem.addEventListener("click", () => {
+                    // Redirect based on category
+                    if (product.category === "camera") {
+                        window.location.href = "cameras.html";
+                    } else if (product.category === "accessory") {
+                        window.location.href = "accessories.html";
+                    }
+                });
+                searchResults.appendChild(resultItem);
+            });
+            searchResults.style.display = "block"; // Show results
+        } else {
+            searchResults.style.display = "none"; // Hide if no matches
+        }
+    }
+
+    // Event listener for typing in the search bar
+    searchBar.addEventListener("input", () => {
+        const query = searchBar.value.trim();
+        if (query.length > 0) {
+            showResults(query);
+        } else {
+            searchResults.style.display = "none"; // Hide results if query is empty
+        }
+    });
+
+    // Toggle search bar visibility when clicking the button
+    searchButton.addEventListener("click", () => {
+        if (searchBar.style.opacity === "0") {
+            searchBar.style.opacity = "1";
+            searchBar.style.width = "250px";
+            searchBar.focus();
+        } else {
+            searchBar.style.opacity = "0";
+            searchBar.style.width = "0";
+            searchResults.style.display = "none"; // Hide results
+        }
+    });
+
+    // Hide results when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!searchBar.contains(event.target) && !searchButton.contains(event.target)) {
+            searchResults.style.display = "none";
+        }
+    });
+});
 
 
 

@@ -13,7 +13,16 @@
         <div class="logo">
             <a href="index.html"><h1>The<br>Camera<br>Club</h1></a>
         </div>
-        <nav>
+        <nav class="nav-bar-desktop">
+            <a href="cameras.html">Cameras</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="services.html">Services</a>
+            <a href="#footer">Contact</a>
+        </nav>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <nav class="nav-bar">
             <a href="cameras.html">Cameras</a>
             <a href="accessories.html">Accessories</a>
             <a href="services.html">Services</a>
@@ -21,7 +30,7 @@
         </nav>
         <div class="search-container">
             <input type="text" id="searchBar" placeholder="Search for a product..." />
-            <div id="searchResults"></div>
+            <div id="searchResults" class="search-results"></div>
             <button id="searchButton">
                 <i class="fas fa-search"></i>
             </button>
@@ -59,43 +68,47 @@
     <section class="service-main">
         <h1>The Camera Club<br>Services</h1>
     </section>
-    <section class="service-highlight">
-        <h2>Camera & Lens Repair</h2>
-        <div class="service-content">
-            <div class="service-image">
-                <img src="img/camera-repair.jpg" alt="Camera Lens Repair">
-            </div>
-            <p>
-                Is your camera acting up, or does your lens seem to have dust and mold in them?
-                Fret not, our experienced technicians are here to help. We offer reliable,
-                high-quality repair services for a variety of camera brands and lens types,
-                ensuring you get back to capturing memories without interruption.
-            </p>
-        </div>
-    </section>
-    <section class="services-list">
-        <h2>Services we offer</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <h3>Camera Body Repair</h3>
+    <div class="service-page">
+        <section class="intro">
+            <h1>Camera & Lens Repair</h1>
+            <div class="intro-content">
+                <img id="img-placeholder" src="img/camera-repair.jpg" alt="camera repair">
                 <p>
-                    Whether it's a shutter malfunction or a sensor that needs a deep clean,
-                    our skilled technicians are equipped to carefully handle the intricate
-                    components that power your camera, restoring it to peak condition.
+                    Is your camera acting up, or does your lens seem to have dust and mold in them? Fret not, our experienced technicians are here to help. 
+                    We offer reliable, high-quality repair services for a variety of camera brands and lens types, ensuring you get back to capturing memories without interruption.
                 </p>
-                <button>Make Appointment</button>
             </div>
-            <div class="service-item">
-                <h3>Lens Repair and Calibration</h3>
-                <p>
-                    Over time, lenses can incur damages to their internals, build up dust and fungus,
-                    or start to see alignment issues. The Camera Club fixes lenses of all types,
-                    ensuring each repair is performed with precision and care for sharp, clear images.
-                </p>
-                <button>Make Appointment</button>
+        </section>
+    
+        <section class="services">
+            <h2>Services we offer</h2>
+            <div class="service">
+                <div class="image">
+                    <img id="img-placeholder" src="img/camera-body.jpg" alt="camera body">
+                </div>
+                <div class="text">
+                    <h3>Camera Body Repair</h3>
+                    <p>
+                        Whether it's a shutter malfunction or a sensor that needs a deep clean, our skilled technicians are equipped to carefully handle the intricate components that power your camera, restoring it to peak condition.
+                    </p>
+                    <button id="appointment">Make Appointment</button>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="service">
+                <div class="image">
+                    <img id="img-placeholder" src="img/camera-lens.jpg" alt="camera lens">
+                </div>
+                <div class="text">
+                    <h3>Lens Repair and Calibration</h3>
+                    <p>
+                        Over time, lenses can incur damages to their internals, build up dust and fungus, or start to see alignment issues. The Camera Club fixes lenses of all types, ensuring each repair is performed with precision and care for sharp, clear images.
+                    </p>
+                    <button id="appointment">Make Appointment</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
 
     <footer id="footer">
         <div class="footer-container">

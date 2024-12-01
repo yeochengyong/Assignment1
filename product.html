@@ -13,7 +13,16 @@
         <div class="logo">
             <a href="index.html"><h1>The<br>Camera<br>Club</h1></a>
         </div>
-        <nav>
+        <nav class="nav-bar-desktop">
+            <a href="cameras.html">Cameras</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="services.html">Services</a>
+            <a href="#footer">Contact</a>
+        </nav>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <nav class="nav-bar">
             <a href="cameras.html">Cameras</a>
             <a href="accessories.html">Accessories</a>
             <a href="services.html">Services</a>
@@ -26,39 +35,68 @@
                 <i class="fas fa-search"></i>
             </button>
         </div>
+
+
+        <!-- Cart Icon -->
+        <div id="cart-icon" onclick="toggleCart()">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count" style="display: none;">0</span>
+        </div>
+        
+        <!-- Shopping Cart Overlay -->
+        <div id="cart-overlay" onclick="closeCart(event)"></div>
+        
+        <!-- Shopping Cart Sidebar -->
+        <div id="cart-sidebar" class="cart">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <p id="cart-total" class="cart-total">Total: $0.00</p>
+                <button onclick="goToCheckout()" class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+
+        <!-- Modal alert IF CART EMPTY -->
+        <div id="empty-cart-modal" class="modal">
+            <div class="modal-content">
+                <p>Your cart is empty!</p>
+            </div>
+        </div>
     </header>
 
     <section class="product-page">
-        <div class="left-content">
-            <div class="image-box">
-                <img src="img/camera-2.jpg" alt="Fujifilm X100VI Camera">
+        <div class="product-layout">
+            <div class="image-section">
+                <div class="image-placeholder">
+                    <img src="img/camera-2.jpg" alt="product image">
+                </div>
             </div>
-            <div class="camera-specs">
-                <h3>Specifications</h3>
-                <ul>
-                    <li>Resolution: 40 Megapixels</li>
-                    <li>Sensor Size: APS-C</li>
-                    <li>Sensor type: BCI-CMOS</li>
-                    <li>Processor: X-Processor 5</li>
-                    <li>Fixed Lens: 23mm f/2</li>
-                    <li>ISO Range: 125-12,800</li>
-                    <li>Image Stabilization: Sensor Shift</li>
-                    <li>LCD: Tilting</li>
-                    <li>Screen dots: 1.62M</li>
-                    <li>Viewfinder Resolution: 3.69M</li>
-                    <li>Weight: 521g</li>
-                </ul>
-            </div>
-        </div>
-        <div class="right-content">
-            <div class="product-summary">
-                <h1>Fujifilm X100VI, Silver</h1>
+            <div class="details-section">
+                <h1>Fujifilm X100VI, Sliver</h1>
                 <p class="price">$2,499.00</p>
                 <p class="tagline">See. Frame. Create.</p>
                 <p class="description">
                     Enjoy photography in its purest form with Fujifilm's X100 Series digital cameras. Using a timeless dial-based design, passed down from model to model, the stunning 6th-generation X100VI offers an indulgent, tactile image-making experience that delivers unforgettable content in every creative moment.
                 </p>
-                <button><a href="checkout.html">Buy Now</a></button>
+                <div class="camera-specs">
+                    <h3>Specifications</h3>
+                    <ul>
+                        <li>Resolution: 40 Megapixels</li>
+                        <li>Sensor Size: APS-C</li>
+                        <li>Sensor type: BCI-CMOS</li>
+                        <li>Processor: X-Processor 5</li>
+                        <li>Fixed Lens: 23mm f/2</li>
+                        <li>ISO Range: 125-12,800</li>
+                        <li>Image Stabilization: Sensor Shift</li>
+                        <li>LCD: Tilting</li>
+                        <li>Screen dots: 1.62M</li>
+                        <li>Viewfinder Resolution: 3.69M</li>
+                        <li>Weight: 521g</li>
+                    </ul>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
     </section>
